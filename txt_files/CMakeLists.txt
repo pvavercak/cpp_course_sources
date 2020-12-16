@@ -10,11 +10,9 @@ string(REPLACE " " "_" ProjectId ${ProjectId})
 
 project(${ProjectId})
 
-file(GLOB project_sources src/*.cpp)
-file(GLOB project_headers src/*.h src/*.hpp)
-
-add_executable(${ProjectId} ${project_sources} ${project_headers})
-
+add_executable(${ProjectId} src/main.cpp)
+add_executable(structs_paddings src/structs_padding.cpp)
 enable_testing()
 
 add_test(NAME ${ProjectId} COMMAND ${ProjectId} WORKDIR "${CMAKE_BINARY_DIR}")
+add_test(NAME structs_paddings COMMAND structs_paddings WORKDIR "${CMAKE_BINARY_DIR}")
