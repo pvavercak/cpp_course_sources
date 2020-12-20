@@ -11,7 +11,11 @@ string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId})
 
 add_executable(vectors src/vectors.cpp)
+add_executable(lists src/lists.cpp)
+add_executable(maps_cli src/maps_cli.cpp)
 
 enable_testing()
 
 add_test(NAME vectors COMMAND vectors WORKDIR "${CMAKE_CURRENT_BINARY_DIR}")
+add_test(NAME lists COMMAND lists WORKDIR "${CMAKE_CURRENT_BINARY_DIR}")
+add_test(NAME maps_cli COMMAND maps_cli WORKDIR "${CMAKE_CURRENT_BINARY_DIR}")

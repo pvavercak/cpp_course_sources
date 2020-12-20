@@ -48,9 +48,36 @@ void vectors_and_memory()
     ints.push_back(7);
     std::cout << "Size : " << ints.size() << std::endl;
     std::cout << "Capacity : " << ints.capacity() << std::endl;
+}
 
+void two_dimensional_vectors_iterator()
+{
+    std::vector< std::vector<int> > ints(12, std::vector<int>(12, 5));
 
+    for(std::vector<std::vector<int>>::iterator row = ints.begin(); row != ints.end(); ++row)
+    {
+        for(std::vector<int>::iterator col = row->begin(); col != row->end(); ++col)
+        {
+            std::cout << *col << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
 
+void two_dimensional_vectors_index()
+{
+    std::vector< std::vector<int> > ints(12, std::vector<int>(12, 6));
+
+    for(int row = 0; row < ints.size(); ++row)
+    {
+        for(int col = 0; col < ints[row].size(); ++col)
+        {
+            std::cout << ints[row][col] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
 int main()
@@ -59,4 +86,7 @@ int main()
 
     vectors_and_memory();
 
+    two_dimensional_vectors_iterator();
+
+    two_dimensional_vectors_index();
 }

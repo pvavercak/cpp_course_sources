@@ -1,0 +1,5 @@
+George:30
+John:70
+Patrik:23
+Peter:80
+Raj:30
