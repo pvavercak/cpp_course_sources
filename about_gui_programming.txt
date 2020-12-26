@@ -1,0 +1,4 @@
+multiplatform library for GUI in C++:
+    - wxWidgets
+    - GTK+
+    - QT 
